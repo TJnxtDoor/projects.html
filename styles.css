@@ -1,3 +1,35 @@
 .projects {
     text-align: center;
+    text-align: center;
+    size: 100px;
+}
+
+.spyro {
+    position: fixed;
+    text-align: center;
+    size: 100px;
+
+}
+
+.cars {
+    position: fixed;
+    text-align: center;
+    size: 100px;
+
+}
+
+p {
+    text-align: left;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.SolarCRownOrangeFinder {
+    position: fixed;
+    text-align: center;
+    size: 100px;
+
 }
