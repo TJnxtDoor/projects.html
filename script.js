@@ -1,7 +1,7 @@
  document.addEventListener('DOMContentLoaded', function() {
-            const username = 'TJnxtDoor'; 
+            const username = 'TJnxtDoor'; // GitHub username
             const projectsContainer = document.getElementById('projects-container');
-            
+            // List of  repositories to display
             const favoriteRepos = [
                 { name: 'Spyro', displayName: 'Spyro Mod' },
                 { name: 'cars', displayName: 'Cars UI/UX Project' },
@@ -34,6 +34,7 @@
                     // Create language color indicator
                     const languageColor = getLanguageColor(repo.language);
                     // Populate project card
+                    // opens a blank tab to the repo
                     projectCard.innerHTML = `
                         <h2>${favoriteRepos[index].displayName}</h2>
                         <p>${repo.description || 'No description available'}</p>
@@ -49,10 +50,11 @@
                             <div class="project-updated">Updated: ${updatedDate}</div>
                         </div>
                     `;
-                    
+                    // Append project card to container
                     projectsContainer.appendChild(projectCard);
                 });
             })
+            // Error handling for fetch failures
             .catch(error => {
                 console.error('Error fetching repositories:', error);
                 projectsContainer.innerHTML = `
@@ -79,7 +81,7 @@
                     'Swift': '#ffac45',
 
                 };
-                
+                // Default color if language not found
                 return languageColors[language] || '#6c757d';
             }
         });
